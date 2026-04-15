@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String
+  slug     String    @unique
+  icon     String?
+  services Service[]
+}
+
+model Service {
+  id          Int         @id @default(autoincrement())
+  name        String
+  description String
+  price       Float
+  image       String?
+  categoryId  Int
+  category    Category    @relation(fields: [categoryId], references: [id])
+  orderItems  OrderItem[]
+}
+
+model Order {
+  id           Int         @id @default(autoincrement())
+  customerName String
+  phone        String
+  lineId       String
+  note         String?
+  totalPrice   Float
+  status       String      @default("pending")
+  createdAt    DateTime    @default(now())
+  items        OrderItem[]
+}
+
+model OrderItem {
+  id        Int     @id @default(autoincrement())
+  quantity  Int
+  price     Float
+  orderId   Int
+  serviceId Int
+  order     Order   @relation(fields: [orderId], references: [id])
+  service   Service @relation(fields: [serviceId], references: [id])
+}
+
+model Portfolio {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  description String
+  result      String?
+  clientName  String?
+  platform    String?
+  image       String?
+  videoUrl    String?
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
+model Article {
+  id        Int      @id @default(autoincrement())
+  title     String
+  slug      String   @unique
+  content   String
+  excerpt   String?
+  image     String?
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
