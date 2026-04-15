@@ -2,6 +2,14 @@ import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
+export async function generateStaticParams() {
+  const articles = await prisma.article.findMany({
+    where: { published: true },
+    select: { slug: true },
+  });
+  return articles.map((article) => ({ slug: article.slug }));
+}
+
 export default async function ArticlePage({
   params,
 }: {

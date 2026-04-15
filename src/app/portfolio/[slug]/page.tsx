@@ -2,6 +2,14 @@ import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
+export async function generateStaticParams() {
+  const items = await prisma.portfolio.findMany({
+    where: { published: true },
+    select: { slug: true },
+  });
+  return items.map((item) => ({ slug: item.slug }));
+}
+
 export default async function PortfolioDetailPage({
   params,
 }: {
