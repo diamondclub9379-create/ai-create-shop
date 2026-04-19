@@ -12,10 +12,6 @@ async function main() {
     data: { name: "รับทำคลิป", slug: "video-production", icon: "🎬" },
   });
 
-  const socialCategory = await prisma.category.create({
-    data: { name: "ปั๊มยอด Social Media", slug: "social-boost", icon: "🚀" },
-  });
-
   const fanpageCategory = await prisma.category.create({
     data: { name: "รับดูแลแฟนเพจ", slug: "fanpage-management", icon: "📱" },
   });
@@ -45,47 +41,6 @@ async function main() {
         description: "คลิปวิดีโอ 5-10 นาที สำหรับ YouTube พร้อม Thumbnail, ตัดต่อ, กราฟิก, ซับไตเติ้ล",
         price: 3500,
         categoryId: clipCategory.id,
-      },
-    ],
-  });
-
-  await prisma.service.createMany({
-    data: [
-      {
-        name: "เพิ่มผู้ติดตาม Facebook",
-        description: "เพิ่มผู้ติดตามเพจ Facebook 1,000 คน คนจริง เริ่มทำภายใน 24 ชม.",
-        price: 590,
-        categoryId: socialCategory.id,
-      },
-      {
-        name: "เพิ่มไลค์โพสต์ Facebook",
-        description: "เพิ่มไลค์โพสต์ Facebook 1,000 ไลค์ เริ่มทำทันที",
-        price: 290,
-        categoryId: socialCategory.id,
-      },
-      {
-        name: "เพิ่มผู้ติดตาม Instagram",
-        description: "เพิ่มผู้ติดตาม Instagram 1,000 คน โปรไฟล์จริง เริ่มทำภายใน 24 ชม.",
-        price: 490,
-        categoryId: socialCategory.id,
-      },
-      {
-        name: "เพิ่มวิว TikTok",
-        description: "เพิ่มยอดวิว TikTok 10,000 วิว เริ่มทำทันที ยอดขึ้นเร็ว",
-        price: 390,
-        categoryId: socialCategory.id,
-      },
-      {
-        name: "เพิ่มวิว YouTube",
-        description: "เพิ่มยอดวิว YouTube 1,000 วิว วิวจริง Retention สูง",
-        price: 490,
-        categoryId: socialCategory.id,
-      },
-      {
-        name: "เพิ่ม Subscriber YouTube",
-        description: "เพิ่ม Subscriber YouTube 1,000 คน คนจริง ไม่หลุด",
-        price: 990,
-        categoryId: socialCategory.id,
       },
     ],
   });
