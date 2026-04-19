@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 import ServiceCard from "@/components/ServiceCard";
 
@@ -72,7 +71,7 @@ export default async function HomePage() {
                 className="text-center p-8 rounded-2xl bg-gray-50 hover:bg-gradient-to-br hover:from-blue-50 hover:to-purple-50 transition-all duration-300"
               >
                 <div className="flex justify-center mb-4">
-                  <Image src={item.img} alt={item.title} width={72} height={72} />
+                  <img src={item.img} alt={item.title} width={72} height={72} />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-800">
                   {item.title}
@@ -130,7 +129,7 @@ export default async function HomePage() {
                     }}
                   >
                     <div className="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 h-32 flex items-center justify-center relative">
-                      <Image src="/icons/portfolio.svg" alt="ผลงาน" width={90} height={60} className="drop-shadow-lg" />
+                      <img src="/icons/portfolio.svg" alt="ผลงาน" width={90} height={60} className="drop-shadow-lg" />
                       {item.platform && (
                         <span className="absolute top-2 right-2 bg-white/90 text-gray-700 text-xs px-2 py-0.5 rounded-full font-semibold">
                           {item.platform}
@@ -183,7 +182,7 @@ export default async function HomePage() {
                     }}
                   >
                     <div className="bg-gradient-to-r from-indigo-500 to-blue-500 h-32 flex items-center justify-center">
-                      <Image src="/icons/blog.svg" alt="บทความ" width={90} height={60} className="drop-shadow-lg" />
+                      <img src="/icons/blog.svg" alt="บทความ" width={90} height={60} className="drop-shadow-lg" />
                     </div>
                     <div className="p-5">
                       <h3 className="font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">

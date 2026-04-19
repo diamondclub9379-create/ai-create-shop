@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { prisma } from "@/lib/prisma";
 
 export default async function BlogPage() {
@@ -41,7 +40,7 @@ export default async function BlogPage() {
                 }}
               >
                 <div className="bg-gradient-to-r from-blue-500 to-purple-500 h-40 flex items-center justify-center">
-                  <Image src="/icons/blog.svg" alt="บทความ" width={100} height={70} className="drop-shadow-lg" />
+                  <img src="/icons/blog.svg" alt="บทความ" width={100} height={70} className="drop-shadow-lg" />
                 </div>
                 <div className="p-6">
                   <time className="text-xs text-gray-400 mb-2 block">

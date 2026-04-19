@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 
@@ -52,7 +51,7 @@ export default function ServiceCard({
     >
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-5 flex items-center justify-center h-28">
         {imgSrc ? (
-          <Image
+          <img
             src={imgSrc}
             alt={name}
             width={90}

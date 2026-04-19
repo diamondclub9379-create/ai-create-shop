@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 interface Portfolio {
@@ -91,7 +90,7 @@ export default function PortfolioFilter({
               }}
             >
               <div className="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 h-44 flex items-center justify-center relative">
-                <Image src="/icons/portfolio.svg" alt="ผลงาน" width={110} height={75} className="drop-shadow-lg" />
+                <img src="/icons/portfolio.svg" alt="ผลงาน" width={110} height={75} className="drop-shadow-lg" />
                 {item.platform && (
                   <span className="absolute top-3 right-3 bg-white/90 text-gray-700 text-xs px-3 py-1 rounded-full font-semibold">
                     {item.platform}
