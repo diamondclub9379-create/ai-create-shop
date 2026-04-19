@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <defs>
+    <linearGradient id="ql1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <circle cx="40" cy="40" r="32" fill="url(#ql1)" opacity="0.12"/>
+  <circle cx="40" cy="40" r="22" fill="url(#ql1)" opacity="0.2"/>
+  <!-- Diamond -->
+  <path d="M28 35 L40 22 L52 35 L40 58 Z" fill="url(#ql1)"/>
+  <path d="M28 35 L40 22 L52 35 L40 38 Z" fill="url(#ql1)" opacity="0.8"/>
+  <path d="M40 38 L28 35 L40 58 Z" fill="white" opacity="0.2"/>
+</svg>

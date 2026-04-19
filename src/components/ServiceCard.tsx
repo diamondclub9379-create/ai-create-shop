@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 
@@ -8,10 +9,21 @@ interface ServiceCardProps {
   name: string;
   description: string;
   price: number;
-  icon?: string;
+  categorySlug?: string;
 }
 
-export default function ServiceCard({ id, name, description, price, icon }: ServiceCardProps) {
+const categoryImages: Record<string, string> = {
+  "video-production": "/icons/video-production.svg",
+  "fanpage-management": "/icons/fanpage-management.svg",
+};
+
+export default function ServiceCard({
+  id,
+  name,
+  description,
+  price,
+  categorySlug,
+}: ServiceCardProps) {
   const { addItem } = useCart();
   const [added, setAdded] = useState(false);
   const [expanded, setExpanded] = useState(false);
@@ -27,17 +39,43 @@ export default function ServiceCard({ id, name, description, price, icon }: Serv
   const firstLine = lines[0];
   const bulletLines = lines.slice(1);
   const isMonthly = price >= 5000;
+  const imgSrc = categorySlug ? categoryImages[categorySlug] : null;
 
   return (
     <div
       className="bg-white rounded-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col"
       style={{
-        boxShadow: "0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)",
+        boxShadow:
+          "0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)",
         border: "1px solid #e5e7eb",
       }}
     >
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-center">
-        <span className="text-4xl">{icon || "✨"}</span>
+      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-5 flex items-center justify-center h-28">
+        {imgSrc ? (
+          <Image
+            src={imgSrc}
+            alt={name}
+            width={90}
+            height={90}
+            className="drop-shadow-lg"
+          />
+        ) : (
+          <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
+            <svg
+              className="w-8 h-8 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              />
+            </svg>
+          </div>
+        )}
       </div>
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-lg font-bold text-gray-800 mb-2">{name}</h3>
@@ -48,9 +86,11 @@ export default function ServiceCard({ id, name, description, price, icon }: Serv
             {expanded && (
               <ul className="text-gray-600 text-sm space-y-1 mb-3">
                 {bulletLines.map((line, i) => (
-                  <li key={i} className="flex items-start gap-1">
-                    <span className="text-blue-500 shrink-0">
-                      {line.startsWith("•") ? "" : "•"}
+                  <li key={i} className="flex items-start gap-1.5">
+                    <span className="text-blue-500 shrink-0 mt-0.5">
+                      <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
                     </span>
                     <span>{line.replace(/^•\s*/, "")}</span>
                   </li>
@@ -65,7 +105,9 @@ export default function ServiceCard({ id, name, description, price, icon }: Serv
             </button>
           </>
         ) : (
-          <p className="text-gray-600 text-sm mb-4 line-clamp-2">{description}</p>
+          <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+            {description}
+          </p>
         )}
 
         <div className="flex items-center justify-between mt-auto pt-2">

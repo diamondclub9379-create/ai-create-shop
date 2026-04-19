@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 80" fill="none">
+  <!-- Trophy -->
+  <path d="M45 20 L75 20 L72 45 C72 52 67 58 60 58 C53 58 48 52 48 45 Z" fill="white" opacity="0.4"/>
+  <path d="M45 20 L75 20 L72 45 C72 52 67 58 60 58 C53 58 48 52 48 45 Z" fill="white" opacity="0.15"/>
+  <rect x="55" y="58" width="10" height="8" rx="1" fill="white" opacity="0.35"/>
+  <rect x="48" y="64" width="24" height="5" rx="2" fill="white" opacity="0.4"/>
+  <!-- Handles -->
+  <path d="M45 24 C35 24 32 30 35 38 L48 35" stroke="white" stroke-width="3" fill="none" opacity="0.3"/>
+  <path d="M75 24 C85 24 88 30 85 38 L72 35" stroke="white" stroke-width="3" fill="none" opacity="0.3"/>
+  <!-- Star -->
+  <path d="M60 30 L62 36 L68 36 L63 40 L65 46 L60 42 L55 46 L57 40 L52 36 L58 36 Z" fill="white" opacity="0.8"/>
+  <!-- Sparkles -->
+  <circle cx="30" cy="15" r="3" fill="white" opacity="0.3"/>
+  <circle cx="90" cy="18" r="2" fill="white" opacity="0.25"/>
+  <circle cx="25" cy="55" r="2.5" fill="white" opacity="0.2"/>
+  <circle cx="95" cy="50" r="3.5" fill="white" opacity="0.2"/>
+</svg>

@@ -68,7 +68,7 @@ export default function ServiceTabs({ categories }: { categories: Category[] }) 
                 name={service.name}
                 description={service.description}
                 price={service.price}
-                icon={cat.icon || undefined}
+                categorySlug={cat.slug}
               />
             ))}
           </div>
