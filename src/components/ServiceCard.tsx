@@ -11,11 +11,33 @@ interface ServiceCardProps {
   categorySlug?: string;
 }
 
+// Per-service images (matched by service name keyword)
+const serviceImages: Record<string, string> = {
+  "TikTok/Reels": "/icons/svc-tiktok-reels.svg",
+  "รีวิวสินค้า": "/icons/svc-review-clip.svg",
+  "โฆษณา/โปรโมท": "/icons/svc-ads-promo.svg",
+  "YouTube": "/icons/svc-youtube-long.svg",
+  "AI Cloning Secrets": "/icons/svc-ai-course.svg",
+  "AI Clone — ให้": "/icons/svc-ai-service.svg",
+  "VIP": "/icons/svc-ai-vip.svg",
+  "แพ็คเกจ S": "/icons/svc-page-s.svg",
+  "แพ็คเกจ M": "/icons/svc-page-m.svg",
+  "แพ็คเกจ L": "/icons/svc-page-l.svg",
+};
+
+// Fallback category images
 const categoryImages: Record<string, string> = {
   "video-production": "/icons/video-production.svg",
   "ai-cloning": "/icons/ai-cloning.svg",
   "fanpage-management": "/icons/fanpage-management.svg",
 };
+
+function getServiceImage(name: string, categorySlug?: string): string | null {
+  for (const [keyword, img] of Object.entries(serviceImages)) {
+    if (name.includes(keyword)) return img;
+  }
+  return categorySlug ? categoryImages[categorySlug] || null : null;
+}
 
 export default function ServiceCard({
   id,
@@ -39,7 +61,7 @@ export default function ServiceCard({
   const firstLine = lines[0];
   const bulletLines = lines.slice(1);
   const isMonthly = price >= 5000;
-  const imgSrc = categorySlug ? categoryImages[categorySlug] : null;
+  const imgSrc = getServiceImage(name, categorySlug);
 
   return (
     <div

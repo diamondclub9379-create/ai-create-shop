@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" fill="none">
+  <!-- Crown -->
+  <path d="M35 20 L45 32 L55 15 L65 32 L75 20 L72 42 L38 42Z" fill="white" opacity="0.6"/>
+  <circle cx="35" cy="18" r="3" fill="white" opacity="0.7"/>
+  <circle cx="55" cy="13" r="3" fill="white" opacity="0.7"/>
+  <circle cx="75" cy="18" r="3" fill="white" opacity="0.7"/>
+  <!-- VIP badge -->
+  <rect x="38" y="45" width="34" height="14" rx="7" fill="white" opacity="0.5"/>
+  <text x="55" y="55" text-anchor="middle" fill="#7c3aed" font-size="9" font-weight="bold" font-family="sans-serif">VIP</text>
+  <!-- Clone person + AI -->
+  <circle cx="30" cy="65" r="7" fill="white" opacity="0.35"/>
+  <path d="M22 82 C22 74 26 71 30 71 C34 71 38 74 38 82" fill="white" opacity="0.35"/>
+  <!-- Content calendar -->
+  <rect x="65" y="55" width="35" height="28" rx="4" fill="white" opacity="0.3"/>
+  <rect x="68" y="62" width="6" height="5" rx="1" fill="white" opacity="0.4"/>
+  <rect x="76" y="62" width="6" height="5" rx="1" fill="white" opacity="0.5"/>
+  <rect x="84" y="62" width="6" height="5" rx="1" fill="white" opacity="0.4"/>
+  <rect x="68" y="70" width="6" height="5" rx="1" fill="white" opacity="0.3"/>
+  <rect x="76" y="70" width="6" height="5" rx="1" fill="white" opacity="0.4"/>
+  <rect x="84" y="70" width="6" height="5" rx="1" fill="white" opacity="0.5"/>
+  <!-- 15 clips -->
+  <rect x="48" y="65" width="14" height="14" rx="7" fill="white" opacity="0.5"/>
+  <text x="55" y="75" text-anchor="middle" fill="#7c3aed" font-size="7" font-weight="bold" font-family="sans-serif">15</text>
+  <!-- Sparkles -->
+  <path d="M15 15 L17 11 L19 15 L23 17 L19 19 L17 23 L15 19 L11 17Z" fill="white" opacity="0.35"/>
+  <path d="M100 10 L101.5 7 L103 10 L106 11.5 L103 13 L101.5 16 L100 13 L97 11.5Z" fill="white" opacity="0.3"/>
+</svg>
