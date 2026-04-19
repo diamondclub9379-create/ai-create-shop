@@ -1,22 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" fill="none">
-  <!-- Medium screen -->
-  <rect x="25" y="10" width="70" height="50" rx="6" fill="white" opacity="0.3"/>
-  <rect x="30" y="17" width="60" height="35" rx="3" fill="white" opacity="0.12"/>
+  <!-- Tablet/Screen -->
+  <rect x="15" y="5" width="90" height="60" rx="8" fill="#1e293b"/>
+  <rect x="20" y="12" width="80" height="46" rx="4" fill="#334155"/>
   <!-- Content grid -->
-  <rect x="34" y="21" width="18" height="13" rx="2" fill="white" opacity="0.4"/>
-  <rect x="55" y="21" width="18" height="13" rx="2" fill="white" opacity="0.35"/>
-  <rect x="34" y="37" width="18" height="13" rx="2" fill="white" opacity="0.35"/>
-  <rect x="55" y="37" width="18" height="13" rx="2" fill="white" opacity="0.3"/>
-  <!-- Chart -->
-  <rect x="76" y="30" width="10" height="6" rx="1" fill="white" opacity="0.3"/>
-  <rect x="76" y="25" width="10" height="11" rx="1" fill="white" opacity="0.2"/>
+  <rect x="24" y="16" width="23" height="18" rx="3" fill="#8b5cf6"/>
+  <rect x="50" y="16" width="23" height="18" rx="3" fill="#ec4899"/>
+  <rect x="76" y="16" width="20" height="18" rx="3" fill="#06b6d4"/>
+  <rect x="24" y="38" width="23" height="16" rx="3" fill="#f59e0b"/>
+  <rect x="50" y="38" width="23" height="16" rx="3" fill="#10b981"/>
+  <rect x="76" y="38" width="20" height="16" rx="3" fill="#3b82f6"/>
   <!-- M badge -->
-  <circle cx="90" cy="14" r="10" fill="white" opacity="0.55"/>
-  <text x="90" y="18" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold" font-family="sans-serif">M</text>
-  <!-- 10 posts -->
-  <rect x="20" y="68" width="35" height="12" rx="6" fill="white" opacity="0.45"/>
-  <text x="37" y="77" text-anchor="middle" fill="#3b82f6" font-size="7" font-weight="bold" font-family="sans-serif">10 post</text>
-  <!-- 1 campaign -->
-  <rect x="62" y="68" width="40" height="12" rx="6" fill="white" opacity="0.4"/>
-  <text x="82" y="77" text-anchor="middle" fill="#3b82f6" font-size="6" font-weight="bold" font-family="sans-serif">1 Ads</text>
+  <circle cx="100" cy="10" r="11" fill="#8b5cf6"/>
+  <text x="100" y="15" text-anchor="middle" fill="white" font-size="13" font-weight="bold" font-family="sans-serif">M</text>
+  <!-- Stats -->
+  <rect x="10" y="70" width="30" height="16" rx="5" fill="#06b6d4"/>
+  <text x="25" y="81" text-anchor="middle" fill="white" font-size="8" font-weight="bold" font-family="sans-serif">10</text>
+  <text x="25" y="85" text-anchor="middle" fill="white" font-size="4" font-family="sans-serif">โพสต์/ด.</text>
+  <rect x="45" y="70" width="30" height="16" rx="5" fill="#f59e0b"/>
+  <text x="60" y="81" text-anchor="middle" fill="white" font-size="8" font-weight="bold" font-family="sans-serif">1</text>
+  <text x="60" y="85" text-anchor="middle" fill="white" font-size="4" font-family="sans-serif">แคมเปญ</text>
+  <rect x="80" y="70" width="30" height="16" rx="5" fill="#10b981"/>
+  <text x="95" y="81" text-anchor="middle" fill="white" font-size="8" font-weight="bold" font-family="sans-serif">CI</text>
+  <text x="95" y="85" text-anchor="middle" fill="white" font-size="4" font-family="sans-serif">แบรนด์</text>
 </svg>

@@ -1,27 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" fill="none">
   <!-- Crown -->
-  <path d="M35 20 L45 32 L55 15 L65 32 L75 20 L72 42 L38 42Z" fill="white" opacity="0.6"/>
-  <circle cx="35" cy="18" r="3" fill="white" opacity="0.7"/>
-  <circle cx="55" cy="13" r="3" fill="white" opacity="0.7"/>
-  <circle cx="75" cy="18" r="3" fill="white" opacity="0.7"/>
+  <path d="M30 18 L42 32 L55 12 L68 32 L80 18 L76 42 L34 42Z" fill="#fbbf24"/>
+  <circle cx="30" cy="16" r="4" fill="#f59e0b"/>
+  <circle cx="55" cy="10" r="4" fill="#f59e0b"/>
+  <circle cx="80" cy="16" r="4" fill="#f59e0b"/>
   <!-- VIP badge -->
-  <rect x="38" y="45" width="34" height="14" rx="7" fill="white" opacity="0.5"/>
-  <text x="55" y="55" text-anchor="middle" fill="#7c3aed" font-size="9" font-weight="bold" font-family="sans-serif">VIP</text>
-  <!-- Clone person + AI -->
-  <circle cx="30" cy="65" r="7" fill="white" opacity="0.35"/>
-  <path d="M22 82 C22 74 26 71 30 71 C34 71 38 74 38 82" fill="white" opacity="0.35"/>
-  <!-- Content calendar -->
-  <rect x="65" y="55" width="35" height="28" rx="4" fill="white" opacity="0.3"/>
-  <rect x="68" y="62" width="6" height="5" rx="1" fill="white" opacity="0.4"/>
-  <rect x="76" y="62" width="6" height="5" rx="1" fill="white" opacity="0.5"/>
-  <rect x="84" y="62" width="6" height="5" rx="1" fill="white" opacity="0.4"/>
-  <rect x="68" y="70" width="6" height="5" rx="1" fill="white" opacity="0.3"/>
-  <rect x="76" y="70" width="6" height="5" rx="1" fill="white" opacity="0.4"/>
-  <rect x="84" y="70" width="6" height="5" rx="1" fill="white" opacity="0.5"/>
+  <rect x="35" y="45" width="40" height="16" rx="8" fill="#7c3aed"/>
+  <text x="55" y="57" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="sans-serif">VIP</text>
+  <!-- Calendar -->
+  <rect x="68" y="55" width="38" height="30" rx="5" fill="#1e293b"/>
+  <rect x="68" y="55" width="38" height="10" rx="5" fill="#ef4444"/>
+  <!-- Calendar dots -->
+  <rect x="72" y="70" width="6" height="5" rx="1.5" fill="#10b981"/>
+  <rect x="81" y="70" width="6" height="5" rx="1.5" fill="#06b6d4"/>
+  <rect x="90" y="70" width="6" height="5" rx="1.5" fill="#8b5cf6"/>
+  <rect x="72" y="78" width="6" height="5" rx="1.5" fill="#f59e0b"/>
+  <rect x="81" y="78" width="6" height="5" rx="1.5" fill="#ec4899"/>
+  <rect x="90" y="78" width="6" height="5" rx="1.5" fill="#10b981"/>
   <!-- 15 clips -->
-  <rect x="48" y="65" width="14" height="14" rx="7" fill="white" opacity="0.5"/>
-  <text x="55" y="75" text-anchor="middle" fill="#7c3aed" font-size="7" font-weight="bold" font-family="sans-serif">15</text>
+  <circle cx="30" cy="72" r="14" fill="#ec4899"/>
+  <text x="30" y="76" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="sans-serif">15</text>
   <!-- Sparkles -->
-  <path d="M15 15 L17 11 L19 15 L23 17 L19 19 L17 23 L15 19 L11 17Z" fill="white" opacity="0.35"/>
-  <path d="M100 10 L101.5 7 L103 10 L106 11.5 L103 13 L101.5 16 L100 13 L97 11.5Z" fill="white" opacity="0.3"/>
+  <path d="M12 12 L14 7 L16 12 L21 14 L16 16 L14 21 L12 16 L7 14Z" fill="#06b6d4"/>
+  <path d="M100 8 L102 4 L104 8 L108 10 L104 12 L102 16 L100 12 L96 10Z" fill="#f43f5e"/>
 </svg>

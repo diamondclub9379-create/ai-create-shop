@@ -72,7 +72,7 @@ export default function ServiceCard({
         border: "1px solid #e5e7eb",
       }}
     >
-      <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-5 flex items-center justify-center h-28">
+      <div className="p-5 flex items-center justify-center h-32" style={{ background: 'linear-gradient(135deg, #ede9fe 0%, #e0f2fe 50%, #fce7f3 100%)' }}>
         {imgSrc ? (
           <img
             src={imgSrc}

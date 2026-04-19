@@ -1,22 +1,27 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" fill="none">
-  <!-- Person sending script -->
-  <circle cx="30" cy="28" r="10" fill="white" opacity="0.4"/>
-  <path d="M18 55 C18 43 24 38 30 38 C36 38 42 43 42 55" fill="white" opacity="0.4"/>
+  <!-- Person -->
+  <circle cx="28" cy="25" r="12" fill="#f59e0b"/>
+  <path d="M14 55 C14 40 20 35 28 35 C36 35 42 40 42 55" fill="#f59e0b" opacity="0.8"/>
   <!-- Arrow -->
-  <path d="M45 40 L65 40" stroke="white" stroke-width="2.5" stroke-dasharray="5 3" opacity="0.6"/>
-  <polygon points="63,36 70,40 63,44" fill="white" opacity="0.6"/>
-  <!-- AI Clone output -->
-  <rect x="72" y="15" width="35" height="55" rx="5" fill="white" opacity="0.3"/>
-  <circle cx="89" cy="30" r="8" fill="white" opacity="0.3"/>
-  <rect x="82" y="42" width="14" height="2" rx="1" fill="white" opacity="0.4"/>
-  <rect x="79" y="48" width="20" height="2" rx="1" fill="white" opacity="0.3"/>
-  <rect x="81" y="54" width="16" height="2" rx="1" fill="white" opacity="0.3"/>
+  <rect x="46" y="36" width="22" height="4" rx="2" fill="#8b5cf6"/>
+  <polygon points="66,32 75,38 66,44" fill="#8b5cf6"/>
+  <!-- Script paper on arrow -->
+  <rect x="48" y="25" width="14" height="10" rx="2" fill="white"/>
+  <rect x="50" y="28" width="8" height="1.5" rx="0.5" fill="#94a3b8"/>
+  <rect x="50" y="31" width="6" height="1.5" rx="0.5" fill="#94a3b8"/>
+  <!-- AI Clone -->
+  <circle cx="92" cy="25" r="12" fill="#06b6d4"/>
+  <path d="M78 55 C78 40 84 35 92 35 C100 35 106 40 106 55" fill="#06b6d4" opacity="0.8"/>
   <!-- AI badge -->
-  <rect x="80" y="62" width="18" height="10" rx="5" fill="white" opacity="0.6"/>
-  <text x="89" y="70" text-anchor="middle" fill="#7c3aed" font-size="7" font-weight="bold" font-family="sans-serif">AI</text>
+  <rect x="82" y="48" width="20" height="12" rx="6" fill="#ec4899"/>
+  <text x="92" y="57" text-anchor="middle" fill="white" font-size="8" font-weight="bold" font-family="sans-serif">AI</text>
+  <!-- Circuit dots on clone -->
+  <circle cx="86" cy="20" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="98" cy="20" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="92" cy="16" r="1.5" fill="white" opacity="0.7"/>
   <!-- 5 clips badge -->
-  <rect x="15" y="62" width="30" height="14" rx="7" fill="white" opacity="0.45"/>
-  <text x="30" y="72" text-anchor="middle" fill="#7c3aed" font-size="7" font-weight="bold" font-family="sans-serif">5 clips</text>
-  <!-- Sparkles -->
-  <path d="M55 15 L57 11 L59 15 L63 17 L59 19 L57 23 L55 19 L51 17Z" fill="white" opacity="0.4"/>
+  <rect x="15" y="62" width="35" height="16" rx="8" fill="#10b981"/>
+  <text x="32" y="73" text-anchor="middle" fill="white" font-size="8" font-weight="bold" font-family="sans-serif">5 clips</text>
+  <!-- Sparkle -->
+  <path d="M58 12 L60 7 L62 12 L67 14 L62 16 L60 21 L58 16 L53 14Z" fill="#fbbf24"/>
 </svg>

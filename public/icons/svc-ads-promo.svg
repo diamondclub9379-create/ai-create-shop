@@ -1,18 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" fill="none">
   <!-- Megaphone -->
-  <path d="M25 35 L55 25 L55 60 L25 50 Z" fill="white" opacity="0.5"/>
-  <rect x="15" y="37" width="12" height="12" rx="3" fill="white" opacity="0.4"/>
-  <ellipse cx="55" cy="42.5" rx="5" ry="18" fill="white" opacity="0.3"/>
+  <path d="M20 32 L52 20 L52 60 L20 48Z" fill="#f59e0b"/>
+  <rect x="10" y="34" width="12" height="12" rx="4" fill="#fbbf24"/>
+  <ellipse cx="52" cy="40" rx="5" ry="20" fill="#d97706"/>
   <!-- Sound waves -->
-  <path d="M62 32 C68 36 68 49 62 53" stroke="white" stroke-width="2.5" fill="none" opacity="0.5"/>
-  <path d="M68 26 C78 33 78 52 68 59" stroke="white" stroke-width="2.5" fill="none" opacity="0.35"/>
-  <path d="M74 20 C87 30 87 55 74 65" stroke="white" stroke-width="2.5" fill="none" opacity="0.2"/>
-  <!-- Storyboard frames -->
-  <rect x="80" y="15" width="15" height="12" rx="2" fill="white" opacity="0.35"/>
-  <rect x="98" y="15" width="15" height="12" rx="2" fill="white" opacity="0.35"/>
-  <rect x="80" y="30" width="15" height="12" rx="2" fill="white" opacity="0.25"/>
-  <rect x="98" y="30" width="15" height="12" rx="2" fill="white" opacity="0.25"/>
-  <!-- Graph arrow up -->
-  <path d="M85 75 L95 60 L105 65 L110 50" stroke="white" stroke-width="2.5" fill="none" opacity="0.5" stroke-linecap="round"/>
-  <polygon points="108,46 114,50 108,54" fill="white" opacity="0.5"/>
+  <path d="M60 28 C68 33 68 47 60 52" stroke="#ef4444" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M67 22 C78 30 78 50 67 58" stroke="#f97316" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M74 16 C88 27 88 53 74 64" stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+  <!-- Graph -->
+  <rect x="80" y="55" width="8" height="20" rx="2" fill="#10b981"/>
+  <rect x="91" y="45" width="8" height="30" rx="2" fill="#06b6d4"/>
+  <rect x="102" y="35" width="8" height="40" rx="2" fill="#8b5cf6"/>
+  <!-- Arrow up -->
+  <path d="M88 30 L98 15" stroke="#ef4444" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <polygon points="95,10 103,15 97,18" fill="#ef4444"/>
 </svg>

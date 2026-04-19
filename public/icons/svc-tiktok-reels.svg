@@ -1,18 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 90" fill="none">
-  <!-- Phone frame -->
-  <rect x="38" y="5" width="44" height="80" rx="8" fill="white" opacity="0.35"/>
-  <rect x="42" y="15" width="36" height="55" rx="3" fill="white" opacity="0.15"/>
-  <!-- Play icon -->
-  <polygon points="55,35 55,50 67,42.5" fill="white" opacity="0.9"/>
+  <!-- Phone -->
+  <rect x="38" y="5" width="44" height="80" rx="8" fill="#1e1b4b" opacity="0.9"/>
+  <rect x="42" y="15" width="36" height="55" rx="4" fill="#312e81"/>
+  <!-- Video content -->
+  <rect x="42" y="15" width="36" height="55" rx="4" fill="#7c3aed" opacity="0.5"/>
+  <!-- Play button -->
+  <circle cx="60" cy="42" r="12" fill="#f43f5e"/>
+  <polygon points="56,36 56,48 67,42" fill="white"/>
   <!-- Music notes -->
-  <circle cx="25" cy="25" r="5" fill="white" opacity="0.5"/>
-  <rect x="29" y="12" width="2" height="14" rx="1" fill="white" opacity="0.5"/>
-  <circle cx="95" cy="35" r="4" fill="white" opacity="0.4"/>
-  <rect x="98" y="24" width="2" height="12" rx="1" fill="white" opacity="0.4"/>
-  <!-- Timer badge -->
-  <rect x="45" y="58" width="30" height="10" rx="5" fill="white" opacity="0.6"/>
-  <text x="60" y="66" text-anchor="middle" fill="#7c3aed" font-size="7" font-weight="bold" font-family="sans-serif">60s</text>
+  <circle cx="22" cy="22" r="6" fill="#f59e0b"/>
+  <rect x="27" y="10" width="2.5" height="13" rx="1" fill="#f59e0b"/>
+  <circle cx="98" cy="32" r="5" fill="#06b6d4"/>
+  <rect x="102" y="22" width="2" height="11" rx="1" fill="#06b6d4"/>
   <!-- Hearts -->
-  <path d="M88 55 C88 52 92 50 94 53 C96 50 100 52 100 55 C100 59 94 63 94 63 C94 63 88 59 88 55Z" fill="white" opacity="0.45"/>
-  <path d="M18 50 C18 48 20 47 21 48.5 C22 47 24 48 24 50 C24 52 21 54 21 54 C21 54 18 52 18 50Z" fill="white" opacity="0.3"/>
+  <path d="M92 55 C92 51 97 49 99 52 C101 49 106 51 106 55 C106 60 99 64 99 64 C99 64 92 60 92 55Z" fill="#f43f5e"/>
+  <!-- Timer -->
+  <rect x="47" y="60" width="26" height="8" rx="4" fill="#10b981"/>
+  <text x="60" y="67" text-anchor="middle" fill="white" font-size="6" font-weight="bold" font-family="sans-serif">0:60</text>
+  <!-- Likes count -->
+  <rect x="14" y="58" width="20" height="16" rx="4" fill="#ec4899"/>
+  <text x="24" y="69" text-anchor="middle" fill="white" font-size="7" font-weight="bold" font-family="sans-serif">99+</text>
 </svg>
