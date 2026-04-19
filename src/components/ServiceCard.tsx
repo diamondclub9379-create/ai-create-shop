@@ -13,6 +13,7 @@ interface ServiceCardProps {
 
 const categoryImages: Record<string, string> = {
   "video-production": "/icons/video-production.svg",
+  "ai-cloning": "/icons/ai-cloning.svg",
   "fanpage-management": "/icons/fanpage-management.svg",
 };
 

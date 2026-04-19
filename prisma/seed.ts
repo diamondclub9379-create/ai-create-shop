@@ -12,6 +12,10 @@ async function main() {
     data: { name: "รับทำคลิป", slug: "video-production", icon: "🎬" },
   });
 
+  const aiCloneCategory = await prisma.category.create({
+    data: { name: "AI Cloning — โคลนนิ่งตัวคุณ", slug: "ai-cloning", icon: "🤖" },
+  });
+
   const fanpageCategory = await prisma.category.create({
     data: { name: "รับดูแลแฟนเพจ", slug: "fanpage-management", icon: "📱" },
   });
@@ -41,6 +45,30 @@ async function main() {
         description: "คลิปวิดีโอ 5-10 นาที สำหรับ YouTube พร้อม Thumbnail, ตัดต่อ, กราฟิก, ซับไตเติ้ล",
         price: 3500,
         categoryId: clipCategory.id,
+      },
+    ],
+  });
+
+  // Seed AI Cloning services
+  await prisma.service.createMany({
+    data: [
+      {
+        name: "AI Cloning Secrets — โคลนนิ่งตัวคุณ",
+        description: `อยากมีวิดีโอตัวเอง แต่ไม่อยากออกกล้อง? โคลนนิ่งตัวคุณเป็น AI ให้พูดแทนได้เนียนจนแยกไม่ออก!\n• เตรียมตัวก่อนสร้าง Clone AI ให้ใช้งานได้จริง\n• เทคนิคถ่ายวิดีโอเพื่อ Train AI ให้สมจริง\n• วิธีสร้าง Cloning AI โดยละเอียด\n• ทำคลิปจากเสียง/ข้อความ ไม่ต้องพูดเองซักคำ\n• ปรับท่าทาง อารมณ์ ให้เป็นธรรมชาติ คนแยกไม่ออก\n• ทำคลิปภาษาต่างประเทศ อ่านไม่ออกก็ทำได้\n• ทำภาพเคลื่อนไหวจากภาพนิ่งให้รีวิวสินค้า\n• ตัวอย่างและไอเดียนำไปใช้งานจริง`,
+        price: 990,
+        categoryId: aiCloneCategory.id,
+      },
+      {
+        name: "รับทำคลิป AI Clone — ให้ AI พูดแทนคุณ",
+        description: `ส่งสคริปต์มา เราทำคลิป AI ให้เสร็จ! เหมาะสำหรับคนที่ไม่มีเวลาทำเอง\n• ถ่ายวิดีโอ Train AI ให้ (1 ครั้ง)\n• สร้าง AI Clone ตัวคุณ\n• รับทำคลิป AI 5 คลิป/เดือน\n• ตัดต่อ ใส่ซับ กราฟิกพร้อมลง\n• คลิปขายของ / รีวิว / TikTok / Reels\n• ใช้ได้ไม่จำกัด หลังจาก Train แล้ว`,
+        price: 2990,
+        categoryId: aiCloneCategory.id,
+      },
+      {
+        name: "แพ็คเกจ VIP — AI Clone + ดูแลคอนเทนต์",
+        description: `บริการครบจบ! สร้าง AI Clone + วางแผนคอนเทนต์ + ทำคลิปให้ทุกเดือน\n• สร้าง AI Clone ตัวคุณ (Train ครั้งเดียว ใช้ตลอดชีพ)\n• วางแผนคอนเทนต์รายเดือน\n• ทำคลิป AI 15 คลิป/เดือน\n• ตัดต่อ ใส่ซับ กราฟิก พร้อมลง\n• ที่ปรึกษาด้านคอนเทนต์ส่วนตัว\n• คลิปภาษาต่างประเทศ (อังกฤษ/จีน)\n• รายงานผล Engagement ประจำเดือน`,
+        price: 9900,
+        categoryId: aiCloneCategory.id,
       },
     ],
   });
