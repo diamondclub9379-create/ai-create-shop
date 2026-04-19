@@ -16,6 +16,10 @@ async function main() {
     data: { name: "ปั๊มยอด Social Media", slug: "social-boost", icon: "🚀" },
   });
 
+  const fanpageCategory = await prisma.category.create({
+    data: { name: "รับดูแลแฟนเพจ", slug: "fanpage-management", icon: "📱" },
+  });
+
   await prisma.service.createMany({
     data: [
       {
@@ -82,6 +86,30 @@ async function main() {
         description: "เพิ่ม Subscriber YouTube 1,000 คน คนจริง ไม่หลุด",
         price: 990,
         categoryId: socialCategory.id,
+      },
+    ],
+  });
+
+  // Seed fanpage management services
+  await prisma.service.createMany({
+    data: [
+      {
+        name: "แพ็คเกจ S — ดูแลเพจเล็ก",
+        description: "เหมาะสำหรับเพจเริ่มต้น\n• ฟรี เปิดเพจใหม่ + ปั้มผู้ติดตาม 1,000 คน\n• ออกแบบรูปโปรไฟล์ & แบนเนอร์\n• วางแผนคอนเทนต์รายเดือน\n• โพสต์ 5 ครั้ง/เดือน พร้อมออกแบบกราฟิก\n• ที่ปรึกษาส่วนตัว\n• รายงานผลประจำเดือน\n• ออกแบบภาพสำหรับยิงแอด\n• ตอบแชท & คอมเมนต์\n• สร้าง CI แบรนด์",
+        price: 5000,
+        categoryId: fanpageCategory.id,
+      },
+      {
+        name: "แพ็คเกจ M — ดูแลเพจกลาง",
+        description: "เหมาะสำหรับเพจที่ต้องการเติบโต\n• ออกแบบรูปโปรไฟล์ & แบนเนอร์\n• วางแผนคอนเทนต์รายเดือน\n• โพสต์ 10 ครั้ง/เดือน พร้อมออกแบบกราฟิก\n• ที่ปรึกษาส่วนตัว\n• รายงานผลประจำเดือน\n• ออกแบบภาพสำหรับยิงแอด 1 แคมเปญ\n• ตอบแชท & คอมเมนต์\n• สร้าง CI แบรนด์อย่างต่อเนื่อง",
+        price: 15000,
+        categoryId: fanpageCategory.id,
+      },
+      {
+        name: "แพ็คเกจ L — ดูแลเพจใหญ่",
+        description: "เหมาะสำหรับเพจที่ต้องการบริการเต็มรูปแบบ\n• ออกแบบรูปโปรไฟล์ & แบนเนอร์\n• วางแผนคอนเทนต์เชิงกลยุทธ์\n• โพสต์ 15 ครั้ง/เดือน พร้อมกราฟิกมืออาชีพ\n• ที่ปรึกษาเฉพาะทาง\n• รายงานผลเชิงลึกประจำเดือน\n• ออกแบบภาพสำหรับยิงแอด 4 แคมเปญ\n• ดูแลแชท & คอมเมนต์ครบวงจร\n• สร้าง CI แบรนด์ระยะยาว",
+        price: 35000,
+        categoryId: fanpageCategory.id,
       },
     ],
   });

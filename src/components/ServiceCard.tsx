@@ -14,6 +14,7 @@ interface ServiceCardProps {
 export default function ServiceCard({ id, name, description, price, icon }: ServiceCardProps) {
   const { addItem } = useCart();
   const [added, setAdded] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handleAdd = () => {
     addItem({ id, name, price });
@@ -21,17 +22,60 @@ export default function ServiceCard({ id, name, description, price, icon }: Serv
     setTimeout(() => setAdded(false), 1500);
   };
 
+  const hasDetails = description.includes("\n");
+  const lines = description.split("\n").filter((l) => l.trim());
+  const firstLine = lines[0];
+  const bulletLines = lines.slice(1);
+  const isMonthly = price >= 5000;
+
   return (
-    <div className="bg-white rounded-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden" style={{ boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)', border: '1px solid #e5e7eb' }}>
+    <div
+      className="bg-white rounded-2xl transition-all duration-300 hover:-translate-y-1 overflow-hidden flex flex-col"
+      style={{
+        boxShadow: "0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)",
+        border: "1px solid #e5e7eb",
+      }}
+    >
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-center">
         <span className="text-4xl">{icon || "✨"}</span>
       </div>
-      <div className="p-6">
+      <div className="p-6 flex flex-col flex-1">
         <h3 className="text-lg font-bold text-gray-800 mb-2">{name}</h3>
-        <p className="text-gray-600 text-sm mb-4 line-clamp-2">{description}</p>
-        <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-600">
-            ฿{price.toLocaleString()}
+
+        {hasDetails ? (
+          <>
+            <p className="text-gray-600 text-sm mb-2">{firstLine}</p>
+            {expanded && (
+              <ul className="text-gray-600 text-sm space-y-1 mb-3">
+                {bulletLines.map((line, i) => (
+                  <li key={i} className="flex items-start gap-1">
+                    <span className="text-blue-500 shrink-0">
+                      {line.startsWith("•") ? "" : "•"}
+                    </span>
+                    <span>{line.replace(/^•\s*/, "")}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="text-blue-500 text-xs font-semibold mb-3 hover:underline self-start"
+            >
+              {expanded ? "ซ่อนรายละเอียด ▲" : "ดูรายละเอียด ▼"}
+            </button>
+          </>
+        ) : (
+          <p className="text-gray-600 text-sm mb-4 line-clamp-2">{description}</p>
+        )}
+
+        <div className="flex items-center justify-between mt-auto pt-2">
+          <div>
+            <div className="text-2xl font-bold text-blue-600">
+              ฿{price.toLocaleString()}
+            </div>
+            {isMonthly && (
+              <span className="text-xs text-gray-400">/เดือน</span>
+            )}
           </div>
           <button
             onClick={handleAdd}
